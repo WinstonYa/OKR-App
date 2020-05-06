@@ -1,0 +1,20 @@
+{
+  "pages":[
+    "pages/welcome/welcome",
+    "pages/todo/todo",
+    "pages/todo_keyresult/todo_keyresult",
+    "pages/okr/okr",
+    "pages/okr_edit/okr_edit",
+    "pages/okr_create/okr_create",
+    "pages/okr_detail/okr_detail",
+    "pages/history/history"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "OKR",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
