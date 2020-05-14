@@ -1,13 +1,13 @@
-// 引入 koa 框架
 const Koa = require('koa');
-// 引入 路由
+var bodyParser = require('koa-bodyparser');
 const router = require('./routes');
-// 实例化应用
 const app = new Koa();
 const response = require('./middlewares/response');
+const auth = require('./middlewares/auth');
 
-// 使用路由，监听3000 端口
 app
+  .use(auth.decode)
+  .use(bodyParser())
   .use(response)
   .use(router.routes())
   .use(router.allowedMethods())

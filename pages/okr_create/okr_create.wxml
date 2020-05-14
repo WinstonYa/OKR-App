@@ -1,1 +1,17 @@
-<view class="">okr_create</view>
+<view class="page-container">
+  <view class="form-list">
+    <view class="form-item">
+      <view class="form-title">Objective 目标：</view>
+      <input type="text" class="form-input" placeholder="请输入你的目标"/>
+      <view class="form-ctrl" hover-class="form-ctrl_hover">+</view>
+    </view>
+    <view class="form-item">
+      <view class="form-title">Keyresult 成果1：</view>
+      <input type="text" class="form-input" placeholder="请输入你的目标"/>
+      <view class="form-ctrl" hover-class="form-ctrl_hover">-</view>
+    </view>
+  </view>
+  <view class="page-footer">
+    <button class="add-btn" hover-class="add-btn_hover">新增</button>
+  </view>
+</view>

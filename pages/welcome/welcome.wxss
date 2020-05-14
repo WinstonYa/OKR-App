@@ -1,0 +1,93 @@
+.page-container{
+  height: 100vh;
+  width: 100%;
+  background-color: whitesmoke;
+  background-image: linear-gradient(
+    #f1f1f1,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0.5));
+}
+
+.page-container .wave {
+  position: absolute;
+  top: -350px;
+  left: -50%;
+  width: 750px;
+  height: 800px;
+  background: #f1f1f1;
+  border-radius: 43%;
+  filter: opacity(0.4);
+  animation: drift linear infinite;
+}
+
+.page-container .wave:nth-of-type(1) {
+  animation-duration: 5s;
+}
+
+.page-container .wave:nth-of-type(2) {
+  animation-duration: 7s;
+}
+
+.page-container .wave:nth-of-type(3) {
+  animation-duration: 9s;
+}
+
+.page-container .wave {
+  transform-origin: 50% 48%;
+}
+
+.page-container .wave:nth-of-type(3) {
+  background-color: #666;
+  filter: opacity(0.1);
+}
+
+@keyframes drift {
+  from {
+    transform: rotate(360deg);
+  }
+}
+
+.content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 120rpx;
+}
+
+.content .title{
+  color: #333;
+  font-size: 22px;
+  letter-spacing: 1px;
+  margin-bottom: 10rpx;
+}
+.content .desc{
+  color: #666;
+  font-size: 16px;
+}
+
+.objective-list{
+  margin-top: 40px;
+  color: #999;
+  font-size: 12px;
+  line-height: 22px;
+}
+
+/*登录按钮*/
+.login-btn{
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  bottom: 40rpx;
+  height: 100rpx;
+  width: 400rpx;
+  line-height: 100rpx;
+  background-color: #666;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.login-btn_hover{
+  opacity: 0.8;
+}

@@ -3,8 +3,19 @@ const router = require('koa-router')({
 })
 
 const testController = require('../controllers/test');
-const cors = require('../middlewares/cors')
+const todoController = require('../controllers/todo');
+const okrController = require('../controllers/okr');
+const todoKeyresultController = require('../controllers/todo_keyresult');
 
-router.get('/test', cors.allowAll, testController.test)
+router.get('/test', testController.test);
+
+router.get('/todo', todoController.all);
+router.put('/todo', todoController.update);
+router.post('/todo', todoController.insert);
+router.delete('/todo', todoController.delete);
+
+router.get('/okr', okrController.all);
+
+router.get('/todoKeyresult', todoKeyresultController.keyresult);
 
 module.exports = router

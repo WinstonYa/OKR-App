@@ -1,0 +1,41 @@
+.todo-tips{
+  color: #999;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.todo-item{
+  position: relative;
+  background-color: #f5f5f5;
+  border-radius: 2px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.todo-item:after{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  content: '完成';
+  border: 2px solid #999;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  transform: rotate(-45deg);
+  font-size: 20px;
+  top: -10px;
+  right: -10px;
+  color: #999;
+  opacity: .4;
+}
+
+.todo-title{
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.todo-created_time{
+  font-size: 12px;
+  color: #999;
+}

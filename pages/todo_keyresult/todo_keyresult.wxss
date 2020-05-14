@@ -1,0 +1,27 @@
+.todo-tips{
+  color: #999;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.objective-title{
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.keyresult-item{
+  line-height: 20px;
+  font-size: 14px;
+  padding: 5px;
+  color: #333;
+  margin-bottom: 10px;
+  border: 1px solid #333;
+  color: #666;
+  border-radius: 2px;
+}
+
+.keyresult-item.active{
+  background-color: #333;
+  color: #fff;
+}

@@ -1,1 +1,10 @@
-<view class="">完成历史页</view>
+<view class="page-container">
+  <view class="todo-tips">已完成的Todos,真棒~</view>
+  <view class="todo-list">
+    <view class="todo-item" wx:key="id" wx:for="{{todos}}" bindtap="showActionSheet" data-id="{{item.id}}" data-status="{{item.status}}">
+      <view class="todo-title">{{item.title}}</view>
+      <view class="todo-created_time">· 创建时间：{{item.created_time}}</view>
+      <view class="todo-created_time">· 完成时间：{{item.finished_time}}</view>
+    </view>
+  </view>
+</view>

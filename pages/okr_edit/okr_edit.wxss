@@ -1,0 +1,54 @@
+.page-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-list{
+  flex: 1;
+}
+
+.form-item{
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.form-title{
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.form-input{
+  width: 80%;
+  height: 40px;
+  border: 1px solid #333;
+  padding: 0 5px;
+  font-size: 16px;
+  border-radius: 2px;
+}
+
+.form-ctrl{
+  position: absolute;
+  top: 20px;
+  right: 2%;
+  font-size: 25px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 35px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.form-ctrl_hover{
+  opacity: 0.8;
+}
+
+.sub-btn{
+  background-color: #333;
+  color: #fff;
+}
+
+.sub-btn_hover{
+  opacity: 0.8;
+}

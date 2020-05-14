@@ -1,1 +1,35 @@
-<view class="">新建页</view>
+<view class="page-container">
+  <view class="page-content">
+    <view class="objective-item" hover-class="objective-item--hover">
+      <view class="objective-title">我想让网站打开速度快一点</view>
+      <view class="objective-created_time">· 创建时间：2020/05/07 11:11:11</view>
+      <view class="objective-created_time">· 完成时间：2020/05/07 11:11:11</view>
+    </view>
+    <view class="keyresult-list">
+      <view class="keyresult-item" hover-class="keyresult-item--hover">
+        <view class="keyresult-info">
+          <view class="keyresult-title">感知上也很快</view>
+          <view class="keyresult-tag">完成</view>
+        </view>
+        <view class="todos-list">
+          <view class="todo-item">
+            <view class="todo-title">· 通知Loading</view>
+          </view>
+        </view>
+      </view>
+      <view class="keyresult-item" hover-class="keyresult-item--hover">
+        <view class="keyresult-info">
+          <view class="keyresult-title">打开速度快30%</view>
+          <view class="keyresult-tag">点击标记</view>
+        </view>
+        <view class="todos-list">
+          <view class="todo-item">
+            <view class="todo-title">· 替换较大的资源库</view>
+            <view class="todo-title">· Javascripter代码压缩</view>
+            <view class="todo-title">· 图片资源压缩和代理</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

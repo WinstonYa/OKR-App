@@ -1,20 +1,44 @@
 {
-  "pages":[
-    "pages/welcome/welcome",
+  "pages": [
     "pages/todo/todo",
+    "pages/welcome/welcome",
+    
     "pages/todo_keyresult/todo_keyresult",
     "pages/okr/okr",
     "pages/okr_edit/okr_edit",
     "pages/okr_create/okr_create",
     "pages/okr_detail/okr_detail",
-    "pages/history/history"
+     "pages/history/history"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "OKR",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#000",
+    "list": [
+      {
+        "pagePath": "pages/todo/todo",
+        "text": "Todo",
+        "iconPath": "/images/triangle.png",
+        "selectedIconPath": "/images/triangle_selected.png"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "text": "Done",
+        "iconPath": "/images/circle.png",
+        "selectedIconPath": "/images/circle_selected.png"
+      },
+      {
+        "pagePath": "pages/okr/okr",
+        "text": "OKR",
+        "iconPath": "/images/tag.png",
+        "selectedIconPath": "/images/tag_selected.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap35.json"
 }
