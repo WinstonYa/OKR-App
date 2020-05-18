@@ -1,4 +1,5 @@
 import API from './../../models/api';
+const app = getApp();
 
 Page({
   data: {
@@ -80,12 +81,13 @@ Page({
     })
   },
   handleBlur() {
-    let _this = this
+    let _this = this;
     let value = this.data.value;
+    let user_id = app.globalData.userInfo.id
     wx.request({
       url: API.todo,
       method: 'POST',
-      data: { value },
+      data: { value,user_id },
       success(res) {
         if (res.data.code === 200) {
           _this.setData({

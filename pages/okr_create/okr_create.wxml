@@ -2,16 +2,16 @@
   <view class="form-list">
     <view class="form-item">
       <view class="form-title">Objective 目标：</view>
-      <input type="text" class="form-input" placeholder="请输入你的目标"/>
-      <view class="form-ctrl" hover-class="form-ctrl_hover">+</view>
+      <input type="text" class="form-input" placeholder="请输入你的目标" value="{{objective}}"/>
+      <view class="form-ctrl" hover-class="form-ctrl_hover" bindtap="addKeyresult">+</view>
     </view>
-    <view class="form-item">
-      <view class="form-title">Keyresult 成果1：</view>
+    <view class="form-item" wx:for="{{keyresults}}" wx:key="index" data-index="{{index}}">
+      <view class="form-title">Keyresult 成果{{index+1}}：</view>
       <input type="text" class="form-input" placeholder="请输入你的目标"/>
-      <view class="form-ctrl" hover-class="form-ctrl_hover">-</view>
+      <view class="form-ctrl" hover-class="form-ctrl_hover" bindtap="reduceKeyresult">-</view>
     </view>
   </view>
   <view class="page-footer">
-    <button class="add-btn" hover-class="add-btn_hover">新增</button>
+    <button class="add-btn" hover-class="add-btn_hover" bindtap='handleSubmit'>新增</button>
   </view>
 </view>
