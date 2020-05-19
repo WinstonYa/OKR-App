@@ -25,11 +25,12 @@ Page({
       url: "/pages/okr_create/okr_create",
     })
   },
-  showActionSheet() {
+  showActionSheet(e) {
+    let id = e.currentTarget.dataset.id;
+    let _this = this;
     wx.showActionSheet({
       itemList: ['查看', '编辑', '已完成', '删除'],
       success(res) {
-        console.log(res.tapIndex)
         switch (res.tapIndex) {
           case 0:
             wx.navigateTo({
@@ -38,13 +39,32 @@ Page({
             break;
           case 1:
             wx.navigateTo({
-              url: "/pages/okr_edit/okr_edit"
+              url: "/pages/okr_edit/okr_edit?id=" + id
             })
+            break;
+          case 2:
+            break;
+          case 3:
+            _this.removeObjective(id);
             break;
         }
       },
       fail(res) {
         console.log(res.errMsg)
+      }
+    })
+  },
+  removeObjective(id) {
+    let _this = this;
+    wx.request({
+      url: API.okr + '/' + id,
+      method: 'DELETE',
+      data: { id },
+      success(res) {
+        console.log(res)
+        if(res.data.code == 200){
+          _this.onLoad();
+        }
       }
     })
   }

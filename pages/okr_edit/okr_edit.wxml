@@ -2,21 +2,16 @@
   <view class="form-list">
     <view class="form-item">
       <view class="form-title">Objective 目标：</view>
-      <input type="text" class="form-input" placeholder="请输入你的目标" value="我想让网站打开的速度快一点" />
-      <view class="form-ctrl" hover-class="form-ctrl_hover">+</view>
+      <input type="text" class="form-input" placeholder="请输入你的目标" value="{{title}}" bindinput="handleTitle" />
+      <view class="form-ctrl" hover-class="form-ctrl_hover" bindtap="addKeyresult">+</view>
     </view>
-    <view class="form-item">
-      <view class="form-title">Keyresult 成果1：</view>
-      <input type="text" class="form-input" placeholder="请输入你的目标" value="感知上也很快" />
-      <view class="form-ctrl" hover-class="form-ctrl_hover">-</view>
-    </view>
-    <view class="form-item">
-      <view class="form-title">Keyresult 成果2：</view>
-      <input type="text" class="form-input" placeholder="请输入你的目标" value="打开速度快30%" />
-      <view class="form-ctrl" hover-class="form-ctrl_hover">-</view>
+    <view class="form-item" wx:for="{{keyresults}}" wx:key="id" data-index="{{index}}">
+      <view class="form-title">Keyresult 成果{{index+1}}：</view>
+      <input type="text" class="form-input" placeholder="请输入你的目标" value="{{item.title}}" bindinput="handleKeyresult" data-index="{{index}}" />
+      <view class="form-ctrl" hover-class="form-ctrl_hover" bindtap="removeKeyresult" data-index="{{index}}" data-id="{{item.id}}">-</view>
     </view>
   </view>
   <view class="page-footer">
-    <button class="sub-btn" hover-class="sub-btn_hover">保存</button>
+    <button class="sub-btn" hover-class="sub-btn_hover" bindtap="handleSubmit">保存</button>
   </view>
 </view>

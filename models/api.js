@@ -5,4 +5,5 @@ export default {
   login: `${PREFIX}/login`,
   okr: `${PREFIX}/okr`,
   todo_keyesult:`${PREFIX}/todo/todoKeyresult`,
+  keyresult: `${PREFIX}/keyresult`
 }
