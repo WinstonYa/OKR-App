@@ -1,10 +1,14 @@
 <view class="page-container">
-  <button class="objective-created-btn" hover-class="objective-created-btn_hover" bindtap="addObjective">添加 OKR</button>
+  <button class="objective-created-btn" hover-class="objective-created-btn_hover" bindtap="addObjective">
+    添加 OKR
+  </button>
   <view class="objective-list">
-    <view class="objective-item" wx:for="{{okrList}}" wx:key="id" bindtap="showActionSheet" data-id="{{item.id}}">
+    <view class="objective-item {{item.status == 1 ? 'finished':''}}" wx:for="{{okrList}}" wx:key="id" bindtap="showActionSheet" data-id="{{item.id}}">
       <view class="objective-title">{{item.title}}</view>
       <view class="objective-created_time">创建时间：{{item.created_time}}</view>
-      <view class="objective-created_time" wx:if="{{item.finished_item}}">完成时间：{{item.finished_time}}</view>
+      <view class="objective-created_time" wx:if="{{item.finished_item}}">
+        完成时间：{{item.finished_time}}
+      </view>
     </view>
   </view>
 </view>

@@ -2,7 +2,8 @@ import API from './../../models/api';
 
 Page({
   data: {
-    okrList: []
+    okrList: [],
+    status: 0
   },
   onLoad() {
     this.onShow();
@@ -34,7 +35,7 @@ Page({
         switch (res.tapIndex) {
           case 0:
             wx.navigateTo({
-              url: "/pages/okr_detail/okr_detail"
+              url: "/pages/okr_detail/okr_detail?id=" + id
             })
             break;
           case 1:
@@ -43,6 +44,7 @@ Page({
             })
             break;
           case 2:
+            _this.updateStatus(id)
             break;
           case 3:
             _this.removeObjective(id);
@@ -54,6 +56,20 @@ Page({
       }
     })
   },
+  updateStatus(id) {
+    let status = this.data.status;
+    let _this = this;
+    wx.request({
+      url: API.okr + '/' + 'completed' + '/' + id,
+      data: { status },
+      method: 'PUT',
+      success(res) {
+        if(res.data.code == 200){
+          _this.onLoad()
+        }
+      }
+    })
+  },
   removeObjective(id) {
     let _this = this;
     wx.request({
@@ -61,8 +77,7 @@ Page({
       method: 'DELETE',
       data: { id },
       success(res) {
-        console.log(res)
-        if(res.data.code == 200){
+        if (res.data.code == 200) {
           _this.onLoad();
         }
       }
